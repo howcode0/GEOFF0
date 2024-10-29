@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="continer">
+        <nav>
+            <ul class="active"> <img class="imge" style="width: 15%;" src="geofbyupng.png">
+                <li><a class="brand" href="index.html">Home</a></li>
+                <li><a href="#">Produ</a></li>
+                <li><a class="contac" href="#">Contact</a></li> <img src="logo.jpeg" alt="Gambar" class="slide-in" id="slideImage" width="10%">
+            </ul>
+        </nav>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            const image = document.getElementById('slideImage');
+            image.classList.add('visible');
+        });
+    </script>
+    <div>
+        <img src="branded.png" alt="Gambar" class="img2" id="imgslide" width="50%">
+        <script>
+            window.addEventListener('load', function() {
+                const image = document.getElementById('imgslide');
+                image.classList.add('visible');
+            });
+        </script>
+        <ul class="menu">
+            <li><a href="produc.html">Get Started</a></li>
+        </ul>
+    </div>
+</body>
+</html>

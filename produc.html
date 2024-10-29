@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOF</title>
+    <link rel="stylesheet" href="produc.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 900px;
+            overflow: hidden;
+
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            margin-top: 31;
+        }
+
+        .swiper-slide img{
+            opacity: 1;
+            transition: opacity 0.5 ease-in-out;
+        }
+        .swiper-slide img:hover{
+            opacity: 0.4;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none; 
+        }
+
+        .img2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #rotatingImage {
+            transition: transform 5s ease-in-out;
+        }
+
+
+        @media (max-width: 768px) {
+            .img2 img {
+                width: 80%; 
+            }
+
+            .swiper-slide img {
+                width: 100%; 
+            }
+
+            .card-1, .card-4 {
+                font-size: 35px; 
+            }
+        }
+
+        @media (min-width: 769px) {
+            .swiper-slide img {
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <nav> 
+            <ul class="active"><p>
+                <li><a class="brand" href="index.html">Home</a></li>
+                <li><a href="#">Produ</a></li>
+                <li><a href="#">Contact</a></li><p></p>
+            </ul>
+        </nav>
+    </div>
+    
+    <div>
+        <img src="bacgroundbranded.png" alt="Gambar" class="slide-in" id="slideImage" width="100%">
+    </div>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const image = document.getElementById('slideImage');
+            image.classList.add('visible');
+        });
+    </script>
+
+    <div class="card-1">Where That Shoes?</div>
+    <div class="card-2">
+        Nikmati setiap langkah yang Anda ambil dengan kenyamanan luar biasa dan desain yang tak tertandingi.GEOF bukan hanya sekadar sepatu; ini adalah pernyataan gaya hidup yang mencerminkan siapa Anda.Jadilah bagian dari komunitas GEOF,Dapatkan sepatu yang tidak hanya memperindah penampilan Anda, tetapi juga memberi kenyamanan setiap hari. Dengan GEOF, Anda akan selalu melangkah lebih jauh!</div>
+    <div class="shop"><li><a href="#">Get Shoes</a></li></div>
+    
+    <img class="to1" style="width: 30%; padding: 5%;" src="totebag.png" alt=""> 
+    <img class="to2" style="width: 20%; filter: saturate(3); padding: 5%;" src="totebag.png" alt=""> 
+    <img class="to3" style="width: 10%; filter: saturate(7); padding: 5%;" src="totebag.png" alt="">
+    
+    <div class="img2">
+        <div class="card-3">What a benefit if buy it?</div> 
+    </div>
+    
+    <div class="card-4">
+        <p>Varian Shoes</p>
+    </div>
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="sp1.png" alt="Gambar 1"><img class="pin" src="set1.png" alt="pin1"></div>
+            <div class="swiper-slide"><img src="sp2.png" alt="Gambar 2"><img class="pin" src="set2.png" alt="pin2"></div>
+            <div class="swiper-slide"><img src="sp3.png" alt="Gambar 3"><img class="pin" src="set3.png" alt="pin3"></div>
+            <div class="swiper-slide"><img src="sp4.png" alt="Gambar 4"><img class="pin" src="set4.png" alt="pin4"></div>
+            <div class="swiper-slide"><img src="sp5.png" alt="Gambar 5"><img class="pin" src="set5.png" alt="pin5"></div>
+            <div class="swiper-slide"><img src="sp6.png" alt="Gambar 6"><img class="pin" src="set6.png" alt="pin6"></div>
+            <div class="swiper-slide"><img src="sp8.png" alt="Gambar 7"><img class="pin" src="set7.png" alt="pin7"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1, 
+            spaceBetween: 10,
+            loop: true,
+            pagination: false,
+            touchMoveStopPropagation: false,
+            breakpoints: {
+                768: { 
+                    slidesPerView: 3, 
+                    spaceBetween: 20,
+                }
+            }
+        });
+    </script>
+    <div class="card-5">
+        <p>Let's Customize</p>
+    </div>
+    <div class="card-6">
+        <p>Customize Sepatu Anda sesuai Diri anda Dan rasakan menyatu dengan sepatu anda sendiri.</p>
+    </div>
+    <div class="img3">
+       <div class="img4"><img src="model7.jpg" alt="gambar1"><div class="img6"><img id="fadingImage" src="spu3-removebg.png" alt="Rotating Image"></div></div>
+    </div>
+    <script>
+   let fadeOut = true;
+setInterval(() => {
+    if (fadeOut) {
+        document.getElementById('fadingImage').style.opacity = '0.8';
+    } else {
+        document.getElementById('fadingImage').style.opacity = '1';
+    }
+    fadeOut = !fadeOut;
+}, 2000);
+    </script>
+    <div class="card-7">
+        <p>Chose Your Customize.</p>
+    </div>
+    <div>
+       </div> <div class="img8"><img src="model10.jpg" alt=""></div><img  src="shoesmodel.png" alt="Slide-on Image" class="img9">
+    </div>
+    <div class="card-8">
+        <p>Many Customize Cant You Apply.</p>
+    <div class="card-9">
+        <p>Grow With we</p>
+    </div>
+</body>
+</html>
